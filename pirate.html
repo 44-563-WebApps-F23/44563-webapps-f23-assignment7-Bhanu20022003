@@ -284,6 +284,27 @@
       document.getElementById("help").textContent = helpmsg;
     }
     
+// Pirate Game
+
+    function getRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    trapLocation = getRandomNumber(0, 24);
+    treasureLocation = getRandomNumber(0, 24);
+
+    function newGame() {
+      trapLocation = getRandomNumber(0, 24);
+      treasureLocation = getRandomNumber(0, 24);
+      locationsChecked = 0;
+      penalty = 0;
+      document.getElementById("counter").innerHTML = "Count: 0";
+      document.getElementById("penalty").innerHTML = "Penalty: 0";
+      document.getElementById("target").innerHTML = "Your time";
+    }
+
+    document.getElementById("newGame").onclick = newGame;
+    
   </script>
 
 </body>
